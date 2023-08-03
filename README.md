@@ -10,13 +10,13 @@ As you can see, the code test is a simple create-react-app, with some included l
 
 This is the app state manager we use at our React apps. It's meant to be used with mobx, and unlike it, is very opinionated as how you should define your stores, models etc.
 
-https://github.com/mobxjs/mobx-state-tree
+[MobX State Tree](https://github.com/mobxjs/mobx-state-tree)
 
 ## interact.js
 
 Genially is a very interactivity-heavy application. Almost everything you use on the app can be moved around with your mouse, selected, scaled, rotated, etc. This library does most of the heavy lifting for us.
 
-https://interactjs.io/
+[Interact js](https://interactjs.io/)
 
 # Test requirements
 
