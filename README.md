@@ -26,22 +26,22 @@ We've also added a rudimentary toolbar for some of the required functionality.
 
 When finished, the app should let the user:
 
-- Add and remove boxes.
-- Select a box, which should visually indicate that is selected
-- Drag the boxes around using interact.js and using React refs.
-  - Keep in mind you should be able to drag a box even if it's not selected when the dragging starts.
-- Changing a box's color.
-- Display a counter indicating how many boxes are selected.
-- Support selection, dragging and color changing for multiple boxes.
-- Save the state of the app locally and restore it when it loads.
-- Undo / Redo capabilities
+- [ ] Add and remove boxes.
+- [ ] Select a box, which should visually indicate that is selected
+- [ ] Drag the boxes around using interact.js and using React refs.
+  - Keep** in mind you should be able to drag a box even if it's not selected when the dragging starts.
+- [ ] Changing a box's color.
+- [ ] Display a counter indicating how many boxes are selected.
+- [ ] Support selection, dragging and color changing for multiple boxes.
+- [ ] Save the state of the app locally and restore it when it loads.
+- [ ] Undo / Redo capabilities
   - **hint**: mobx-state-tree provides a middleware for this.
 
 If you are unable to do some of the above, don't worry! But we would ask to at least explain what went wrong, how you would tackle the problem, or if you have no idea whatsoever 😃 
 
 Even if you manage to do everything, we also greatly appreciate comments on decisions you took, issues you faced or limitations you've left behind on purpose.
 
-A good place to include those comments is the README.md of the repo.
+A good place to include those [comments](#comments-on-the-solution) comments is the README.md of the repo. 
 
 # Delivery method
 
@@ -62,3 +62,7 @@ If you have any questions about the test, you can contact any of us:
 - Julio (juboba@genially.com)
 
 Good Luck!
+
+# Comments on the solution
+
+## Screenshots of the solution
