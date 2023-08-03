@@ -65,4 +65,15 @@ Good Luck!
 
 # Comments on the solution
 
+## Additional library used
+
+I understand that it was not within the requirements, but I wanted to add the following library that allows me to use icons in svg format quickly and easily.
+
+- React Icons (https://react-icons.github.io/react-icons/)
+
+
 ## Screenshots of the solution
+
+Here I included a screenshot of the desktop version of the interface that was modified and improved from the base that was delivered in the technical test. The base of the styles was inspired by the design system of the components that Genially uses on its website.
+
+![Interface Screenshot](/public/screenshot.png)
