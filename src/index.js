@@ -1,9 +1,9 @@
 import React from "react";
 import ReactDOM from "react-dom";
 import "./main.css";
+import "./utils/easterEgg.js";
 import App from "./components/App";
 import * as serviceWorker from "./serviceWorker";
-import "./utils/easterEgg.js"
 
 ReactDOM.render(<App />, document.getElementById("root"));
 

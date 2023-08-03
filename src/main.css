@@ -7,6 +7,7 @@
   --genially-color: #525fff;
   --genially-color-hover: #221ab2;
   --genially-color-active: #221ab241;
+  --genially-grey: #e0e0e0;
 }
 
 * {
@@ -44,8 +45,15 @@ div.toolbar {
 }
 
 div.toolbar span {
-  color: var(--genially-font-color);
+  color: var(--genially-grey);
   font-size: 1.8rem;
+  height: 5.2rem;
+  outline: none;
+  border-radius: 0.5rem;
+  border: 1px solid var(--genially-grey);
+  padding: 0 2rem;
+  display: flex;
+  align-items: center;
 }
 
 button {
@@ -76,18 +84,36 @@ button:active {
   transform: scale(0.95);
 }
 
-.canva {
+
+div.canva {
   width: 80vw;
   min-height: 50vh;
   height: 675px;
   background-color: var(--genially-background-canva);
 }
 
-.box {
+div.box {
   position: absolute;
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+div.box p {
   font-family: var(--genially-font);
   font-size: 1.8rem;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+input[type="color"] {
+  width: 5.5rem;
+  height: 5.4rem;
+  outline: none;
+  border-radius: 0.5rem;
+  background-color: var(--genially-font-color);
+  padding: 0.2rem 0.3rem;
+  cursor: pointer;
 }
