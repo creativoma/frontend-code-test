@@ -101,6 +101,7 @@ svg.btn {
   display: flex;
   align-items: center;
   transition: background 0.15s cubic-bezier(0.4, 0, 0.4, 1) 0s, transform 0.1s cubic-bezier(0.4, 0, 0.4, 1) 0s;
+  cursor: pointer;
 }
 
 svg.btn:hover {
