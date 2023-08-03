@@ -5,6 +5,7 @@
   --genially-font-size: 62.5%;
   --genially-font-color: #ffffff;
   --genially-color: #525fff;
+  --genially-color-pink: #f788e4;
   --genially-color-hover: #221ab2;
   --genially-color-active: #221ab241;
   --genially-grey: #e0e0e0;
@@ -33,15 +34,15 @@ div.app {
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  gap: 3rem;
 }
 
 div.toolbar {
-  position: fixed;
-  top: 2rem;
-  left: 2rem;
   display: flex;
   align-items: center;
+  justify-content: center;
   gap: 2rem;
+  width: 100%;
 }
 
 div.toolbar span {
@@ -54,6 +55,10 @@ div.toolbar span {
   padding: 0 2rem;
   display: flex;
   align-items: center;
+  user-select: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
 }
 
 button {
@@ -84,10 +89,31 @@ button:active {
   transform: scale(0.95);
 }
 
+svg.btn {
+  background-color: var(--genially-color);
+  color: var(--genially-font-color);
+  font-size: 3rem;
+  height: 5.2rem;
+  width: 5.2rem;
+  outline: none;
+  border-radius: 0.5rem;
+  padding: 0 1rem;
+  display: flex;
+  align-items: center;
+  transition: background 0.15s cubic-bezier(0.4, 0, 0.4, 1) 0s, transform 0.1s cubic-bezier(0.4, 0, 0.4, 1) 0s;
+}
+
+svg.btn:hover {
+  background-color: var(--genially-color-hover);
+}
+
+svg.btn:active {
+  transform: scale(0.95);
+}
 
 div.canva {
-  width: 80vw;
-  min-height: 50vh;
+  width: 70vw;
+  min-height: 40vh;
   height: 675px;
   background-color: var(--genially-background-canva);
 }
@@ -101,7 +127,8 @@ div.box {
 
 div.box p {
   font-family: var(--genially-font);
-  font-size: 1.8rem;
+  font-size: 2rem;
+  font-weight: 700;
   -webkit-user-select: none;
   -moz-user-select: none;
   -ms-user-select: none;
