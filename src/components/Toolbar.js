@@ -1,8 +1,7 @@
 import React, { useState } from "react";
-import { addBox, removeBox } from "../events/BoxEvents.js";
+import { addBox, removeBox } from "../events/events.js";
 import LogoGenially from "./LogoGenially";
-import { BiUndo } from "react-icons/bi";
-import { BiRedo } from "react-icons/bi";
+import { BiUndo, BiRedo } from "react-icons/bi";
 
 function Toolbar() {
   const [color, setColor] = useState("#525fff");

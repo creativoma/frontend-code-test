@@ -113,9 +113,8 @@ svg.btn:active {
 }
 
 div.canva {
-  width: 70vw;
-  min-height: 40vh;
-  height: 675px;
+  width: 1024px;
+  aspect-ratio: 16/9;
   background-color: var(--genially-background-canva);
 }
 

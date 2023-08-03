@@ -2,7 +2,7 @@ import React from "react";
 
 const LogoGenially = () => {
   return (
-    <svg width="40px" viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg">
+    <svg width="5.5rem" viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg">
       <g>
         <path
           d="M14.83 1v14.83L27.795 8.64C25.266 4.086 20.41 1 14.83 1z"
