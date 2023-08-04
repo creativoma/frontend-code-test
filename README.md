@@ -28,10 +28,10 @@ When finished, the app should let the user:
 
 - [X] Add and remove boxes.
 - [X] Select a box, which should visually indicate that is selected
-- [ ] Drag the boxes around using interact.js and using React refs.
+- [X] Drag the boxes around using interact.js and using React refs.
   - Keep** in mind you should be able to drag a box even if it's not selected when the dragging starts.
 - [X] Changing a box's color.
-- [ ] Display a counter indicating how many boxes are selected.
+- [X] Display a counter indicating how many boxes are selected.
 - [ ] Support selection, dragging and color changing for multiple boxes.
 - [ ] Save the state of the app locally and restore it when it loads.
 - [ ] Undo / Redo capabilities
@@ -67,9 +67,11 @@ Good Luck!
 
 1) I started the process by forking the project and then cloning the repository to my local environment. Although these improvements were not set as requirements for the technical test, I decided to focus on improving the styles and improving the interface of the application before moving on to the functionalities.
 
-2) I then proceeded to tackle the documentation. It is important to note that I had no previous experience with these libraries, so I dedicated myself to carefully studying the guidelines of each one. Although I had some difficulties at first, I must admit that after going through the documentation again and running additional tests, I managed to get through without any major issues.
+2) I then proceeded to tackle the documentation. It is important to note that I had no previous experience with these libraries, so I dedicated myself to studying the guidelines of each one. Although I had some difficulties at first, I must admit that after going through the documentation again and running tests on it, I managed to get through without any major issues.
 
-3) 
+3) Second day of the project and I was able to apply more functionalities since they share a relationship with each other in their syntax. I had some strange behavior in the boxes that I solved by changing the data it took from the positioning.
+
+4) 
 
 ## Screenshots of the solution
 
@@ -90,3 +92,4 @@ I understand that it was not within the requirements, but I wanted to add the fo
 - Possibility to add other shapes.
 - Possibility to add text.
 - Possibility to save a screenshot of the canvas in png or jpg format.
+- Magnets to align the boxes.

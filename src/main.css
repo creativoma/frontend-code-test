@@ -37,8 +37,20 @@ div.app {
   gap: 3rem;
 }
 
+div.app small {
+  color: var(--genially-grey);
+  font-size: 1.4rem;
+  letter-spacing: .15rem;
+  font-weight: 400;
+  margin-bottom: 1rem;
+  user-select: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+}
+
 div.toolbar {
-  width: 100%;
+  width: 1000px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -51,16 +63,17 @@ div.row {
   justify-content: center;
   align-items: center;
   gap: 2rem;
+
 }
 
 div.row p {
   color: var(--genially-grey);
   font-size: 1.5rem;
-  height: 4.5rem;
+  min-height: 4.5rem;
   outline: none;
   border-radius: 0.5rem;
   border: 1px solid var(--genially-grey);
-  padding: 0 1.5rem;
+  padding: 1.5rem;
   display: flex;
   align-items: center;
   user-select: none;
@@ -68,6 +81,25 @@ div.row p {
   -moz-user-select: none;
   -ms-user-select: none;
   width: fit-content;
+  min-width: 140px;
+  max-width: 600px;
+  position: relative;
+}
+
+div.row p::after {
+  position: absolute;
+  top: -2.5rem;
+  left: 0;
+  font-size: 1.4rem;
+  font-weight: 600;
+}
+
+div.row p:first-child::after {
+  content: "Id's selected";
+}
+
+div.row p:last-child::after {
+  content: "Nº of boxes selected";
 }
 
 button {
@@ -137,7 +169,7 @@ svg.btn:active {
 
 div.canva {
   width: 1000px;
-  aspect-ratio: 16/9;
+  aspect-ratio: 16/7;
   background-color: var(--genially-background-canva);
 }
 
