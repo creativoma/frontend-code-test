@@ -26,11 +26,23 @@ const MainStore = types
         self.boxes.remove(boxSelected);
       }
     },
+    changeColor(color) {
+      const boxSelected = self.boxes.find((box) => box.selected === true);
+      if (boxSelected) {
+        boxSelected.setColor(color);
+      }
+    },
+    updateBox(id, left, top) {
+      const boxSelected = self.boxes.find((box) => box.id === id);
+      if (boxSelected) {
+        boxSelected.transform(left, top);
+      }
+    },
   }))
   .views((self) => ({}));
 const store = MainStore.create();
 
-// Initial Box
+// Printing initial box
 const box1 = BoxModel.create({
   id: uuidv4(),
   color: "var(--genially-color-pink)",

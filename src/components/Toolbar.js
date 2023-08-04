@@ -1,10 +1,9 @@
-import React, { useState } from "react";
-import { addBox, removeAllBox, removeSelectedBox } from "../events/boxEvents.js";
+import React from "react";
+import { addBox, removeAllBox, removeSelectedBox, changeColor } from "../events/boxEvents.js";
 import { BiUndo, BiRedo } from "react-icons/bi";
 import LogoGenially from "./LogoGenially.js";
 
 function Toolbar() {
-  const [color, setColor] = useState("#000f33");
   return (
     <div className="toolbar">
       <span id={"msjSelected"}>
@@ -19,8 +18,8 @@ function Toolbar() {
         </button>
         <input
           type="color"
-          value={color}
-          onChange={(e) => setColor(e.target.value)}
+          value="#000f33"
+          onChange={changeColor}
         />
         <BiUndo className="btn" />
         <BiRedo className="btn" />

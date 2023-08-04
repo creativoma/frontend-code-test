@@ -12,6 +12,12 @@ const setMessage = (id) => {
   }
 };
 
+const setColorInput = (color) => {
+  let inputColor = document.querySelector("input[type=color]");
+  inputColor.value = color;
+};
+
+
 export const addBox = () => {
   const box = BoxModel.create({
     id: uuidv4(),
@@ -21,6 +27,14 @@ export const addBox = () => {
   });
 
   store.addBox(box);
+};
+
+export const changeColor = (e) => {
+  store.changeColor(e.target.value);
+};
+
+export const updateBox = (id, left, top) => {
+  store.updateBox(id, left, top);
 };
 
 export const removeAllBox = () => {
@@ -36,4 +50,5 @@ export const removeSelectedBox = () => {
 export const selectBox = (id) => {
   store.selectBox(id);
   setMessage(id);
+  setColorInput(store.boxes.find((box) => box.id === id).color);
 };

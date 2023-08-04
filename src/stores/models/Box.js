@@ -10,10 +10,16 @@ const BoxModel = types
     top: 0,
     selected: false,
   })
-  .views((self) => ({}))
   .actions((self) => ({
     setSelected(selected) {
       self.selected = selected;
+    },
+    setColor(color) {
+      self.color = color;
+    },
+    transform(left, top) {
+      self.left = left;
+      self.top = top;
     },
   }));
 
