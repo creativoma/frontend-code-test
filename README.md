@@ -41,7 +41,7 @@ If you are unable to do some of the above, don't worry! But we would ask to at l
 
 Even if you manage to do everything, we also greatly appreciate comments on decisions you took, issues you faced or limitations you've left behind on purpose.
 
-A good place to include those [comments](#comments-on-the-solution) comments is the README.md of the repo. 
+A good place to include those [comments](#comments-on-the-solution) is the README.md of the repo. 
 
 # Delivery method
 
@@ -87,6 +87,6 @@ I understand that it was not within the requirements, but I wanted to add the fo
 
 ## Possible future features
 
-- Possibility to add other shapes
-- Possibility to add text
-- Possibility to save a screenshot of the canvas in png or jpg format
+- Possibility to add other shapes.
+- Possibility to add text.
+- Possibility to save a screenshot of the canvas in png or jpg format.
