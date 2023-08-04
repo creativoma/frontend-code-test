@@ -38,8 +38,8 @@ const MainStore = types
         boxSelected.transform(left, top);
       }
     },
-  }))
-  .views((self) => ({}));
+  }));
+
 const store = MainStore.create();
 
 // Printing initial box

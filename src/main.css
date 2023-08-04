@@ -53,7 +53,7 @@ div.row {
   gap: 2rem;
 }
 
-div.toolbar span {
+div.row p {
   color: var(--genially-grey);
   font-size: 1.5rem;
   height: 4.5rem;

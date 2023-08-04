@@ -3,20 +3,25 @@ import getRandomColor from "../utils/getRandomColor.js";
 import BoxModel from "../stores/models/Box.js";
 import store from "../stores/MainStore.js";
 
-const setMessage = (id) => {
-  let msjSelected = document.querySelector("#msjSelected");
+const setMessages = (id) => {
+  let msjSelected = document.querySelector("#idBoxSelected");
   if (id === "none") {
-    msjSelected.innerHTML = "<u>Selected:</u>&nbsp;none";
+    const span = msjSelected.querySelector("span");
+    span.innerHTML = "none";
   } else {
-    msjSelected.innerHTML = "<u>Selected:</u>&nbsp;" + id;
+    const span = msjSelected.querySelector("span");
+    span.innerHTML = `${id}`;
   }
+
+  let msjQuantity = document.querySelector("#quantityBoxSelected");
+  const span = msjQuantity.querySelector("span");
+  span.innerHTML = `${store.boxes.filter((box) => box.selected).length}`;
 };
 
 const setColorInput = (color) => {
   let inputColor = document.querySelector("input[type=color]");
   inputColor.value = color;
 };
-
 
 export const addBox = () => {
   const box = BoxModel.create({
@@ -39,16 +44,16 @@ export const updateBox = (id, left, top) => {
 
 export const removeAllBox = () => {
   store.removeAllBox();
-  setMessage("none");
+  setMessages("none");
 };
 
 export const removeSelectedBox = () => {
   store.removeSelectedBox();
-  setMessage("none");
+  setMessages("none");
 };
 
 export const selectBox = (id) => {
   store.selectBox(id);
-  setMessage(id);
+  setMessages(id);
   setColorInput(store.boxes.find((box) => box.id === id).color);
 };
