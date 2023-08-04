@@ -1,11 +1,12 @@
-import { v4 as uuidv4 } from "uuid";
-import { types } from "mobx-state-tree";
+import { UndoManager } from "mst-middlewares";
+import { types, onSnapshot, applySnapshot } from "mobx-state-tree";
 import BoxModel from "./models/Box.js";
 
 const MainStore = types
   .model("MainStore", {
     boxes: types.array(BoxModel),
     selectedBoxesCounter: 0,
+    undoHistory: types.optional(UndoManager, {}),
   })
   .actions((self) => ({
     addBox(box) {
@@ -58,7 +59,7 @@ const MainStore = types
         }
       } else {
         selectedBoxes.forEach((box) => box.setColor(color));
-      }     
+      }
     },
     updateBox(id, left, top) {
       const boxSelected = self.boxes.find((box) => box.id === id);
@@ -66,18 +67,26 @@ const MainStore = types
         boxSelected.transform(left, top);
       }
     },
+    saveToLocalStorage() {
+      const snapshot = self.toJSON();
+      localStorage.setItem("mainStoreSnapshot", JSON.stringify(snapshot));
+    },
+
+    loadFromLocalStorage() {
+      const snapshotJson = localStorage.getItem("mainStoreSnapshot");
+      if (snapshotJson) {
+        const snapshot = JSON.parse(snapshotJson);
+        applySnapshot(self, snapshot);
+      }
+    },
   }));
 
 const store = MainStore.create();
 
-// Printing initial box
-const box1 = BoxModel.create({
-  id: uuidv4(),
-  color: "#f788e4",
-  left: 0,
-  top: 0,
-});
+store.loadFromLocalStorage();
 
-store.addBox(box1);
+onSnapshot(store, () => {
+  store.saveToLocalStorage();
+});
 
 export default store;

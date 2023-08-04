@@ -76,3 +76,23 @@ export const selectBox = (id, e) => {
     handleMouseEvents(id);
   }
 };
+
+export const undo = () => {
+  if (store.undoHistory.canUndo) {
+    store.undoHistory.undo();
+    setMessages();
+  }
+};
+
+export const redo = () => {
+  if (store.undoHistory.canRedo) {
+    store.undoHistory.redo();
+    setMessages();
+  }
+};
+
+export const storageClear = () => {
+  removeAllBox();
+  localStorage.clear();
+  store.undoHistory.clear();
+};

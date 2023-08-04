@@ -1,12 +1,16 @@
 import React from "react";
+import { BiUndo, BiRedo } from "react-icons/bi";
+import { MdOutlineCleaningServices } from "react-icons/md";
+import LogoGenially from "./LogoGenially.js";
 import {
   addBox,
   removeAllBox,
   removeSelectedBox,
   changeColor,
-} from "../events/boxEvents.js";
-import { BiUndo, BiRedo } from "react-icons/bi";
-import LogoGenially from "./LogoGenially.js";
+  undo,
+  redo,
+  storageClear,
+} from "../events/Events.js";
 
 const Toolbar = () => {
   return (
@@ -23,8 +27,9 @@ const Toolbar = () => {
           Remove all box
         </button>
         <input type="color" value="#000f33" onChange={changeColor} />
-        <BiUndo className="btn" />
-        <BiRedo className="btn" />
+        <BiUndo className="btn" onClick={undo} />
+        <BiRedo className="btn" onClick={redo} />
+        <MdOutlineCleaningServices className="btn cleaner" onClick={storageClear} />
       </div>
     </div>
   );

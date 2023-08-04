@@ -167,6 +167,16 @@ svg.btn:active {
   transform: scale(0.95);
 }
 
+svg.cleaner {
+  background-color: var(--genially-color-pink);
+  color: var(--genially-background-color);
+}
+
+svg.cleaner:hover {
+  background-color: var(--genially-color-hover);
+  color: var(--genially-font-color);
+}
+
 div.canva {
   width: 1000px;
   aspect-ratio: 16/7;

@@ -33,8 +33,8 @@ When finished, the app should let the user:
 - [X] Changing a box's color.
 - [X] Display a counter indicating how many boxes are selected.
 - [ ] Support selection, dragging and color changing for multiple boxes.
-- [ ] Save the state of the app locally and restore it when it loads.
-- [ ] Undo / Redo capabilities
+- [X] Save the state of the app locally and restore it when it loads.
+- [X] Undo / Redo capabilities
   - **hint**: mobx-state-tree provides a middleware for this.
 
 If you are unable to do some of the above, don't worry! But we would ask to at least explain what went wrong, how you would tackle the problem, or if you have no idea whatsoever 😃 
@@ -93,3 +93,4 @@ I understand that it was not within the requirements, but I wanted to add the fo
 - Possibility to add text.
 - Possibility to save a screenshot of the canvas in png or jpg format.
 - Magnets to align the boxes.
+- Tooltips to indicate the functionality of each button.

@@ -1,5 +1,5 @@
 import interact from "interactjs";
-import { updateBox } from "../events/boxEvents.js";
+import { updateBox } from "../events/Events.js";
 
 export const boxDragging = (ref, id, left, top) => {
   const boxCurrent = ref.current;
