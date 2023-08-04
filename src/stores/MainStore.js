@@ -45,7 +45,7 @@ const store = MainStore.create();
 // Printing initial box
 const box1 = BoxModel.create({
   id: uuidv4(),
-  color: "var(--genially-color-pink)",
+  color: "#f788e4",
   left: 0,
   top: 0,
 });
