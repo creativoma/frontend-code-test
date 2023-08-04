@@ -83,7 +83,7 @@ Here I included a screenshot of the desktop version of the interface that was mo
 I understand that it was not within the requirements, but I wanted to add the following library that allows me to use icons in svg format quickly and easily.
 
 - React Icons (https://react-icons.github.io/react-icons/)
-- Prettier (https://prettier.io/) Lo usé para formatear el código para todo el proyecto.
+- Prettier (https://prettier.io/) I used it to format the code for the whole project.
 
 ## Possible future features
 
