@@ -12,12 +12,8 @@ const Toolbar = () => {
   return (
     <div className="toolbar">
       <div className="row">
-        <p id={"idBoxSelected"}>
-          <u>Id selected:</u>&nbsp;<span>none</span>
-        </p>
-        <p id={"quantityBoxSelected"}>
-          <u>Box selected:</u>&nbsp;<span>0</span>
-        </p>
+        <p id={"idBoxSelected"}>-</p>
+        <p id={"quantityBoxSelected"}>0</p>
       </div>
       <div className="row">
         <LogoGenially />

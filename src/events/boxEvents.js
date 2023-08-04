@@ -3,19 +3,20 @@ import getRandomColor from "../utils/getRandomColor.js";
 import BoxModel from "../stores/models/Box.js";
 import store from "../stores/MainStore.js";
 
-const setMessages = (id) => {
+const setMessages = () => {
   let msjSelected = document.querySelector("#idBoxSelected");
-  if (id === "none") {
-    const span = msjSelected.querySelector("span");
-    span.innerHTML = "none";
+  const selectedBoxes = store.boxes.filter((box) => box.selected);
+  if (selectedBoxes.length === 0) {
+    msjSelected.innerHTML = "-";
   } else {
-    const span = msjSelected.querySelector("span");
-    span.innerHTML = `${id}`;
+    const selectedIds = selectedBoxes
+      .map((box) => box.id.substring(0, 8))
+      .join(" - ");
+    msjSelected.innerHTML = selectedIds;
   }
 
   let msjQuantity = document.querySelector("#quantityBoxSelected");
-  const span = msjQuantity.querySelector("span");
-  span.innerHTML = `${store.boxes.filter((box) => box.selected).length}`;
+  msjQuantity.innerHTML = `${selectedBoxes.length}`;
 };
 
 const setColorInput = (color) => {
@@ -47,13 +48,31 @@ export const removeAllBox = () => {
   setMessages("none");
 };
 
-export const removeSelectedBox = () => {
-  store.removeSelectedBox();
-  setMessages("none");
+export const removeSelectedBox = (id, e) => {
+  let handleMouseEvents = () => {
+    setMessages("none");
+  };
+
+  if (store.selectedBoxesCounter > 1) {
+    store.removeMultipleSelectedBox();
+    handleMouseEvents();
+  } else {
+    store.removeSelectedBox();
+    handleMouseEvents();
+  }
 };
 
-export const selectBox = (id) => {
-  store.selectBox(id);
-  setMessages(id);
-  setColorInput(store.boxes.find((box) => box.id === id).color);
+export const selectBox = (id, e) => {
+  let handleMouseEvents = (id) => {
+    setMessages(id);
+    setColorInput(store.boxes.find((box) => box.id === id).color);
+  };
+
+  if (e.ctrlKey) {
+    store.selectMultipleBoxes(id);
+    handleMouseEvents(id);
+  } else {
+    store.selectOneBox(id);
+    handleMouseEvents(id);
+  }
 };

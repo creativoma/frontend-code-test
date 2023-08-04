@@ -9,6 +9,7 @@ function App() {
     <div className="app">
       <Toolbar />
       <Canvas store={store} />
+      <small>Use ctrl + click to select multiple boxes.</small>
     </div>
   );
 }
