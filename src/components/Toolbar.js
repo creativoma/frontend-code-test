@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { addBox, removeAllBox, removeSelectedBox } from "../events/events.js";
+import { addBox, removeAllBox, removeSelectedBox } from "../events/boxEvents.js";
 import { BiUndo, BiRedo } from "react-icons/bi";
 import LogoGenially from "./LogoGenially.js";
 

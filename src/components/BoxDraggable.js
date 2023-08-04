@@ -1,6 +1,6 @@
 import React from "react";
 import { observer } from "mobx-react";
-import { selectBox } from "../events/events.js";
+import { selectBox } from "../events/boxEvents.js";
 
 function BoxDraggable(props) {
   return (
