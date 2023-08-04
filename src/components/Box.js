@@ -2,10 +2,14 @@ import React from "react";
 import { observer } from "mobx-react";
 import BoxDraggable from "./BoxDraggable";
 
+const reduceid = (id) => {
+  return id.slice(0, 3);
+};
+
 function Box(props) {
   return (
     <BoxDraggable {...props}>
-      <p>Box</p>
+      <p>Box {reduceid(props.id)}</p>
     </BoxDraggable>
   );
 }

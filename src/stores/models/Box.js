@@ -5,11 +5,16 @@ const BoxModel = types
     id: types.identifier,
     width: 100,
     height: 100,
-    color: "#221ab2",
+    color: "var(--genially-color-hover)",
     left: 0,
-    top: 0
+    top: 0,
+    selected: false,
   })
-  .views(self => ({}))
-  .actions(self => ({}));
+  .views((self) => ({}))
+  .actions((self) => ({
+    setSelected(selected) {
+      self.selected = selected;
+    },
+  }));
 
 export default BoxModel;

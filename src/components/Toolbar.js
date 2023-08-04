@@ -1,24 +1,30 @@
 import React, { useState } from "react";
-import { addBox, removeBox } from "../events/events.js";
-import LogoGenially from "./LogoGenially";
+import { addBox, removeAllBox, removeSelectedBox } from "../events/events.js";
 import { BiUndo, BiRedo } from "react-icons/bi";
+import LogoGenially from "./LogoGenially.js";
 
 function Toolbar() {
-  const [color, setColor] = useState("#525fff");
-
+  const [color, setColor] = useState("#000f33");
   return (
     <div className="toolbar">
-      <LogoGenially />
-      <button onClick={addBox}>Add Box</button>
-      <button onClick={removeBox}>Remove Box</button>
-      <input
-        type="color"
-        value={color}
-        onChange={(e) => setColor(e.target.value)}
-      />
-      <BiUndo className="btn" />
-      <BiRedo className="btn" />
-      <span>No boxes selected</span>
+      <span id={"msjSelected"}>
+        <u>Selected:</u>&nbsp;none
+      </span>
+      <div className="row">
+        <LogoGenially />
+        <button onClick={addBox}>Add box</button>
+        <button onClick={removeSelectedBox}>Remove selected box</button>
+        <button className="all-remove" onClick={removeAllBox}>
+          Remove all box
+        </button>
+        <input
+          type="color"
+          value={color}
+          onChange={(e) => setColor(e.target.value)}
+        />
+        <BiUndo className="btn" />
+        <BiRedo className="btn" />
+      </div>
     </div>
   );
 }

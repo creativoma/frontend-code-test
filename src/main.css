@@ -38,27 +38,36 @@ div.app {
 }
 
 div.toolbar {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 2rem;
   width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2rem;
+}
+
+div.row {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
 }
 
 div.toolbar span {
   color: var(--genially-grey);
-  font-size: 1.8rem;
-  height: 5.2rem;
+  font-size: 1.5rem;
+  height: 4.5rem;
   outline: none;
   border-radius: 0.5rem;
   border: 1px solid var(--genially-grey);
-  padding: 0 2rem;
+  padding: 0 1.5rem;
   display: flex;
   align-items: center;
   user-select: none;
   -webkit-user-select: none;
   -moz-user-select: none;
   -ms-user-select: none;
+  width: fit-content;
 }
 
 button {
@@ -75,7 +84,9 @@ button {
   border: none;
   text-decoration: none;
   cursor: pointer;
-  transition: background 0.15s cubic-bezier(0.4, 0, 0.4, 1) 0s, transform 0.1s cubic-bezier(0.4, 0, 0.4, 1) 0s;
+  transition:
+    background 0.15s cubic-bezier(0.4, 0, 0.4, 1) 0s,
+    transform 0.1s cubic-bezier(0.4, 0, 0.4, 1) 0s;
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
@@ -89,6 +100,16 @@ button:active {
   transform: scale(0.95);
 }
 
+.all-remove {
+  background-color: var(--genially-color-pink);
+  color: var(--genially-background-color);
+}
+
+.all-remove:hover {
+  background-color: var(--genially-color-hover);
+  color: var(--genially-font-color);
+}
+
 svg.btn {
   background-color: var(--genially-color);
   color: var(--genially-font-color);
@@ -100,7 +121,9 @@ svg.btn {
   padding: 0 1rem;
   display: flex;
   align-items: center;
-  transition: background 0.15s cubic-bezier(0.4, 0, 0.4, 1) 0s, transform 0.1s cubic-bezier(0.4, 0, 0.4, 1) 0s;
+  transition:
+    background 0.15s cubic-bezier(0.4, 0, 0.4, 1) 0s,
+    transform 0.1s cubic-bezier(0.4, 0, 0.4, 1) 0s;
   cursor: pointer;
 }
 
@@ -113,7 +136,7 @@ svg.btn:active {
 }
 
 div.canva {
-  width: 1024px;
+  width: 1000px;
   aspect-ratio: 16/9;
   background-color: var(--genially-background-canva);
 }
@@ -127,8 +150,9 @@ div.box {
 
 div.box p {
   font-family: var(--genially-font);
-  font-size: 2rem;
-  font-weight: 700;
+  font-size: 1.9rem;
+  font-weight: 600;
+  color: var(--genially-font-color);
   -webkit-user-select: none;
   -moz-user-select: none;
   -ms-user-select: none;

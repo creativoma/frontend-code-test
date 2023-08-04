@@ -26,8 +26,8 @@ We've also added a rudimentary toolbar for some of the required functionality.
 
 When finished, the app should let the user:
 
-- [ ] Add and remove boxes.
-- [ ] Select a box, which should visually indicate that is selected
+- [X] Add and remove boxes.
+- [X] Select a box, which should visually indicate that is selected
 - [ ] Drag the boxes around using interact.js and using React refs.
   - Keep** in mind you should be able to drag a box even if it's not selected when the dragging starts.
 - [ ] Changing a box's color.
@@ -54,10 +54,10 @@ If you opt for a fork with limited access, see the contact list below for people
 If you have any questions about the test, you can contact any of us:
 
 - Chema (<em>Github User [@chemitaxis](https://github.com/chemitaxis)</em> / chema@genially.com)
-- Rafa (rafa@genially.com)
+- Román (<em>Github User [@rjimenezda](https://github.com/rjimenezda)</em> / roman@genially.com)
+- Rafa (<em>Github User [@rteran](https://github.com/rteran)</em> / rafa@genially.com)
 - Emanuel (emanuel@genially.com)
 - Jesé (jese@genially.com)
-- Román (roman@genially.com)
 - Perico (perico@genially.com)
 - Julio (juboba@genially.com)
 
@@ -65,15 +65,28 @@ Good Luck!
 
 # Comments on the solution
 
-## Additional library used
+1) I started the process by forking the project and then cloning the repository to my local environment. Although these improvements were not set as requirements for the technical test, I decided to focus on improving the styles and improving the interface of the application before moving on to the functionalities.
 
-I understand that it was not within the requirements, but I wanted to add the following library that allows me to use icons in svg format quickly and easily.
+2) I then proceeded to tackle the documentation. It is important to note that I had no previous experience with these libraries, so I dedicated myself to carefully studying the guidelines of each one. Although I had some difficulties at first, I must admit that after going through the documentation again and running additional tests, I managed to get through without any major issues.
 
-- React Icons (https://react-icons.github.io/react-icons/)
-
+3) 
 
 ## Screenshots of the solution
 
 Here I included a screenshot of the desktop version of the interface that was modified and improved from the base that was delivered in the technical test. The base of the styles was inspired by the design system of the components that Genially uses on its website.
 
 ![Interface Screenshot](/public/screenshot.png)
+
+
+## Additional library used
+
+I understand that it was not within the requirements, but I wanted to add the following library that allows me to use icons in svg format quickly and easily.
+
+- React Icons (https://react-icons.github.io/react-icons/)
+- Prettier (https://prettier.io/) Lo usé para formatear el código para todo el proyecto.
+
+## Possible future features
+
+- Possibility to add other shapes
+- Possibility to add text
+- Possibility to save a screenshot of the canvas in png or jpg format
