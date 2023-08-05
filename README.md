@@ -32,7 +32,7 @@ When finished, the app should let the user:
   - Keep** in mind you should be able to drag a box even if it's not selected when the dragging starts.
 - [X] Changing a box's color.
 - [X] Display a counter indicating how many boxes are selected.
-- [ ] Support selection, dragging and color changing for multiple boxes.
+- [X] Support selection, dragging and color changing for multiple boxes.
 - [X] Save the state of the app locally and restore it when it loads.
 - [X] Undo / Redo capabilities
   - **hint**: mobx-state-tree provides a middleware for this.
@@ -65,20 +65,18 @@ Good Luck!
 
 # Comments on the solution
 
-1) I started the process by forking the project and then cloning the repository to my local environment. Although these improvements were not set as requirements for the technical test, I decided to focus on improving the styles and improving the interface of the application before moving on to the functionalities.
+I started by forking the project and then cloning the repository to my local environment. I improved the styles and the interface of the application before moving on to the functionalities.
+I had no previous experience with these libraries, so I spent my time studying the guidelines in the documentation. At first I had some difficulties that I later overcame.
 
-2) I then proceeded to tackle the documentation. It is important to note that I had no previous experience with these libraries, so I dedicated myself to studying the guidelines of each one. Although I had some difficulties at first, I must admit that after going through the documentation again and running tests on it, I managed to get through without any major issues.
+Then on the second day I was already familiar with the libraries and was able to apply more features. I kept changing the styles as I progressed with the project and new features.
 
-3) Second day of the project and I was able to apply more functionalities since they share a relationship with each other in their syntax. I had some strange behavior in the boxes that I solved by changing the data it took from the positioning.
-
-4) 
+In general it was quite a challenge because I had not done a style project and I enjoyed it. I want to continue exploring these libraries to understand and consolidate the concepts.
 
 ## Screenshots of the solution
 
 Here I included a screenshot of the desktop version of the interface that was modified and improved from the base that was delivered in the technical test. The base of the styles was inspired by the design system of the components that Genially uses on its website.
 
 ![Interface Screenshot](/public/screenshot.png)
-
 
 ## Additional library used
 
@@ -87,6 +85,10 @@ I understand that it was not within the requirements, but I wanted to add the fo
 - React Icons (https://react-icons.github.io/react-icons/)
 - Prettier (https://prettier.io/) I used it to format the code for the whole project.
 
+## Google LightHouse Report
+
+![Google LightHouse Report](/public/lighthouse.png)
+
 ## Possible future features
 
 - Possibility to add other shapes.
@@ -94,3 +96,5 @@ I understand that it was not within the requirements, but I wanted to add the fo
 - Possibility to save a screenshot of the canvas in png or jpg format.
 - Magnets to align the boxes.
 - Tooltips to indicate the functionality of each button.
+- Responsive design for mobile devices.
+- Toast messages to indicate actions such as creating a box, deleting a box, etc.
