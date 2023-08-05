@@ -1,5 +1,5 @@
 import { UndoManager } from "mst-middlewares";
-import { types, onSnapshot, applySnapshot } from "mobx-state-tree";
+import { types, applySnapshot, onSnapshot } from "mobx-state-tree";
 import BoxModel from "./models/Box.js";
 
 const MainStore = types
@@ -25,9 +25,11 @@ const MainStore = types
       if (boxSelected) {
         boxSelected.setSelected(!boxSelected.selected);
       }
-      self.selectedBoxesCounter = self.boxes.filter(
-        (box) => box.selected
-      ).length;
+      const selectedBoxes = self.boxes.filter((box) => box.selected);
+      self.selectedBoxesCounter = selectedBoxes.length;
+      selectedBoxes.forEach((box, index) => {
+        box.setSelected(true);
+      });
     },
     removeAllBox() {
       self.boxes = [];
@@ -45,7 +47,7 @@ const MainStore = types
       if (numBoxesToRemove > 0) {
         self.boxes.splice(
           self.boxes.indexOf(boxesToRemove[0]),
-          numBoxesToRemove
+          numBoxesToRemove,
         );
       }
       self.selectedBoxesCounter = 0;
@@ -61,10 +63,16 @@ const MainStore = types
         selectedBoxes.forEach((box) => box.setColor(color));
       }
     },
-    updateBox(id, left, top) {
+    moveBox(id, left, top) {
       const boxSelected = self.boxes.find((box) => box.id === id);
       if (boxSelected) {
         boxSelected.transform(left, top);
+      }
+    },
+    moveSelectedBox(left, top) {
+      const selectedBoxes = self.boxes.filter((box) => box.selected);
+      if (selectedBoxes) {
+        selectedBoxes.forEach((box) => box.transform(left, top));
       }
     },
     saveToLocalStorage() {

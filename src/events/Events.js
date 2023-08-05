@@ -14,7 +14,6 @@ const setMessages = () => {
       .join(" - ");
     msjSelected.innerHTML = selectedIds;
   }
-
   let msjQuantity = document.querySelector("#quantityBoxSelected");
   msjQuantity.innerHTML = `${selectedBoxes.length}`;
 };
@@ -31,7 +30,6 @@ export const addBox = () => {
     left: 0,
     top: 0,
   });
-
   store.addBox(box);
 };
 
@@ -39,16 +37,12 @@ export const changeColor = (e) => {
   store.changeColor(e.target.value);
 };
 
-export const updateBox = (id, left, top) => {
-  store.updateBox(id, left, top);
-};
-
 export const removeAllBox = () => {
   store.removeAllBox();
   setMessages("none");
 };
 
-export const removeSelectedBox = (id, e) => {
+export const removeSelectedBox = () => {
   let handleMouseEvents = () => {
     setMessages("none");
   };
@@ -63,18 +57,26 @@ export const removeSelectedBox = (id, e) => {
 };
 
 export const selectBox = (id, e) => {
-  let handleMouseEvents = (id) => {
+  let handleMouseEvents = () => {
     setMessages(id);
     setColorInput(store.boxes.find((box) => box.id === id).color);
   };
 
   if (e.ctrlKey) {
     store.selectMultipleBoxes(id);
-    handleMouseEvents(id);
+    handleMouseEvents();
   } else {
     store.selectOneBox(id);
-    handleMouseEvents(id);
+    handleMouseEvents();
   }
+};
+
+export const moveBox = (id, left, top) => {
+  store.moveBox(id, left, top);
+};
+
+export const moveSelectedBox = (left, top) => {
+  store.moveSelectedBox(left, top);
 };
 
 export const undo = () => {

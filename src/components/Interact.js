@@ -1,7 +1,8 @@
 import interact from "interactjs";
-import { updateBox } from "../events/Events.js";
+import { moveBox, moveSelectedBox } from "../events/Events.js";
+import store from "../stores/MainStore.js";
 
-export const boxDragging = (ref, id, left, top) => {
+export const boxDragging = (ref) => {
   const boxCurrent = ref.current;
 
   const boxMovement = interact(boxCurrent).draggable({
@@ -13,20 +14,16 @@ export const boxDragging = (ref, id, left, top) => {
       }),
     ],
     autoScroll: false,
-
     listeners: {
       move(e) {
-        left = (parseInt(boxCurrent.getAttribute("data-x")) || left) + e.dx;
-        top = (parseInt(boxCurrent.getAttribute("data-y")) || top) + e.dy;
-        boxCurrent.setAttribute("data-x", left);
-        boxCurrent.setAttribute("data-y", top);
-        boxCurrent.style.transform = `translate(${left}px, ${top}px)`;
-      },
-      end() {
-        updateBox(id, left, top);
+        if (store.selectedBoxesCounter > 1) {
+          moveSelectedBox(e.dx, e.dy);
+        } else {
+          moveBox(boxCurrent.id, e.dx, e.dy);
+        }
       },
     },
   });
 
-  return boxMovement;
+  return () => boxMovement.unset();
 };

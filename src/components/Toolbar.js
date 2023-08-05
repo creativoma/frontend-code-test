@@ -26,10 +26,20 @@ const Toolbar = () => {
         <button className="all-remove" onClick={removeAllBox}>
           Remove all box
         </button>
-        <input type="color" value="#000f33" onChange={changeColor} />
+        <label htmlFor="pickerColor" style={{ position: "absolute" }}></label>
+        <input
+          aria-label="color-picker"
+          id="pickerColor"
+          type="color"
+          value="#000f33"
+          onChange={changeColor}
+        />
         <BiUndo className="btn" onClick={undo} />
         <BiRedo className="btn" onClick={redo} />
-        <MdOutlineCleaningServices className="btn cleaner" onClick={storageClear} />
+        <MdOutlineCleaningServices
+          className="btn cleaner"
+          onClick={storageClear}
+        />
       </div>
     </div>
   );

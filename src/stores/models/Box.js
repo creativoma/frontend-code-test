@@ -6,10 +6,11 @@ const BoxModel = types
     width: 100,
     height: 100,
     color: "var(--genially-color-hover)",
-    left: 0,
-    top: 0,
+    left: 100,
+    top: 100,
     selected: false,
   })
+  .views((self) => ({}))
   .actions((self) => ({
     setSelected(selected) {
       self.selected = selected;
@@ -18,8 +19,8 @@ const BoxModel = types
       self.color = color;
     },
     transform(left, top) {
-      self.left = left;
-      self.top = top;
+      self.left += left;
+      self.top += top;
     },
   }));
 

@@ -20,10 +20,13 @@ const BoxDraggable = (props) => {
         height: props.height,
         boxSizing: "border-box",
         backgroundColor: props.color,
-        border: props.selected ? ".4rem dotted white" : "none",
+        outlineOffset: "0.5rem",
+        outline: props.selected
+          ? ".2rem dashed var(--genially-background-color)"
+          : "none",
         transform: `translate(${props.left}px, ${props.top}px)`,
       }}
-      onClick={(e) => selectBox(props.id, e)}
+      onDoubleClick={(e) => selectBox(props.id, e)}
     >
       {props.children}
     </div>

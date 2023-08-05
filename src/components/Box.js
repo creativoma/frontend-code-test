@@ -1,6 +1,6 @@
 import React from "react";
 import { observer } from "mobx-react";
-import BoxDraggable from "./BoxDraggable";
+import BoxDraggable from "./BoxDraggable.js";
 
 const reduceid = (id) => {
   return id.slice(0, 3);
