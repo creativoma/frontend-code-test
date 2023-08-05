@@ -40,7 +40,7 @@ div.app {
 div.app small {
   color: var(--genially-grey);
   font-size: 1.4rem;
-  letter-spacing: .15rem;
+  letter-spacing: 0.15rem;
   font-weight: 400;
   margin-bottom: 1rem;
   user-select: none;
@@ -63,7 +63,6 @@ div.row {
   justify-content: center;
   align-items: center;
   gap: 2rem;
-
 }
 
 div.row p {
@@ -181,6 +180,7 @@ div.canva {
   width: 1000px;
   aspect-ratio: 16/7;
   background-color: var(--genially-background-canva);
+  position: relative;
 }
 
 div.box {
