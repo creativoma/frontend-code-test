@@ -72,6 +72,10 @@ Then on the second day I was already familiar with the libraries and was able to
 
 In general it was quite a challenge because I had not done a style project and I enjoyed it. I want to continue exploring these libraries to understand and consolidate the concepts.
 
+## Live preview
+
+Although it was not a requirement, I thought it was appropriate to deploy the application to quickly see how it works. You can see the display [here](https://frontend-code-test-ten.vercel.app/), it was hosted in [Vercel](https://vercel.com/).
+
 ## Screenshots of the solution
 
 Here I included a screenshot of the desktop version of the interface that was modified and improved from the base that was delivered in the technical test. The base of the styles was inspired by the design system of the components that Genially uses on its website.
