@@ -10,8 +10,7 @@ function App() {
       <Toolbar />
       <Canvas store={store} />
       <small>
-        Double-click to select or deselect a box. Press ctrl + double-click to
-        select multiple checkboxes.
+        Double-click to select or deselect a box. Press ctrl + double click to select multiple boxes.
       </small>
     </div>
   );
