@@ -76,6 +76,10 @@ In general it was quite a challenge because I had not done a style project and I
 
 Although it was not a requirement, I thought it was appropriate to deploy the application to quickly see how it works. You can see the display [here](https://frontend-code-test-ten.vercel.app/), it was hosted in [Vercel](https://vercel.com/).
 
+## Testing with Testing Library
+
+Despite my inexperience in testing, I recognize its value and seek training to apply it to my projects and raise the quality of the software I develop. That's why I decided to implement some unit tests on two of the app's components.
+
 ## Screenshots of the solution
 
 Here I included a screenshot of the desktop version of the interface that was modified and improved from the base that was delivered in the technical test. The base of the styles was inspired by the design system of the components that Genially uses on its website.
