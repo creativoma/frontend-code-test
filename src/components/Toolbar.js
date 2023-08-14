@@ -14,7 +14,7 @@ import {
 
 const Toolbar = () => {
   return (
-    <div className="toolbar">
+    <div className="toolbar" data-testid="toolbar">
       <div className="row">
         <p id={"idBoxSelected"}>-</p>
         <p id={"quantityBoxSelected"}>0</p>

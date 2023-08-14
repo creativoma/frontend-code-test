@@ -12,6 +12,7 @@ const BoxDraggable = (props) => {
 
   return (
     <div
+      data-testid="boxDraggable"
       id={props.id}
       ref={ref}
       className="box"
